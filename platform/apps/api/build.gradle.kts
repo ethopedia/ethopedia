@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     application
     id("org.ethopedia.platform.conventions")
-    id("com.expediagroup.graphql") version "7.0.1"
     id("com.bmuschko.docker-java-application") version "9.3.1"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
