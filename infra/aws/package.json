@@ -8,7 +8,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "pnpm run build && cdk deploy --profile ethopedia --require-approval never"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
@@ -22,6 +23,7 @@
   "dependencies": {
     "aws-cdk-lib": "2.87.0",
     "constructs": "^10.0.0",
-    "source-map-support": "^0.5.21"
+    "source-map-support": "^0.5.21",
+    "platform": "*"
   }
 }

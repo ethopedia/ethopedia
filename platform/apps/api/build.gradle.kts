@@ -40,6 +40,11 @@ dependencies {
 
     implementation(platform(libs.aws.sdk.bom))
     implementation("com.amazonaws:aws-lambda-java-core:1.2.1")
+    implementation("com.amazonaws:aws-lambda-java-events:3.11.0")
+
+    implementation(libs.ktor.contentnegotiation)
+    implementation(libs.ktor.json)
+    implementation(libs.ktor.netty)
 
     implementation("com.expediagroup:graphql-kotlin-server:7.0.1")
     implementation("com.expediagroup:graphql-kotlin-ktor-server:7.0.1")
@@ -50,7 +55,7 @@ dependencies {
 docker {
     javaApplication {
         baseImage.set("amazoncorretto:17-alpine")
-        ports.set(listOf(8087))
+        ports.set(listOf(8080))
     }
 }
 
