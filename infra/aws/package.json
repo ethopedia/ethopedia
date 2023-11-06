@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "deploy": "pnpm run build && cdk deploy --profile ethopedia --require-approval never"
+    "deploy": "pnpm run build && cdk deploy --require-approval never"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
