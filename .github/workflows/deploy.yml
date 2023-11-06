@@ -10,7 +10,7 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -24,16 +24,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Set up Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 8.8.0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
 
       - name: Turbo Cache
         id: turbo-cache
@@ -45,9 +45,9 @@ jobs:
             turbo-${{ runner.os }}-${{ runner.arch }}-${{ github.ref_name }}
 
       - name: Install NPM packages
-        run: pnpm install --legacy-peer-deps
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build project
-        run: turbo deploy
+        run: pnpm run deploy
         env:
           CI: false
