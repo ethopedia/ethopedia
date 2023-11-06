@@ -16,8 +16,8 @@ application {
 
 shadow {}
 
-//repositories {
-//    mavenCentral()
+repositories {
+    mavenCentral()
 //    maven {
 //        url = uri("https://maven.pkg.github.com/Ethopedia/monorepo")
 //        credentials {
@@ -25,7 +25,7 @@ shadow {}
 //            password = project.findProperty("ethopedia.gpr.token")?.toString() ?: System.getenv("GH_TOKEN") ?: System.getenv("GITHUB_TOKEN")
 //        }
 //    }
-//}
+}
 
 dependencies {
     implementation(kotlin("stdlib"))
@@ -46,8 +46,7 @@ dependencies {
     implementation(libs.ktor.json)
     implementation(libs.ktor.netty)
 
-    implementation("com.expediagroup:graphql-kotlin-server:7.0.1")
-    implementation("com.expediagroup:graphql-kotlin-ktor-server:7.0.1")
+    implementation("com.expediagroup", "graphql-kotlin-schema-generator", "7.0.1")
 
     testImplementation("io.kotest:kotest-runner-junit5:5.6.2")
 }
