@@ -6,7 +6,7 @@ import com.expediagroup.graphql.generator.toSchema
 
 
 class Query {
-    fun ping(): String = "pong"
+    fun ping(): String = "pong!"
 }
 
 val schema = toSchema(
