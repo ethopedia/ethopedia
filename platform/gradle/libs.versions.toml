@@ -1,0 +1,74 @@
+[versions]
+kotlin = "1.8.20"
+kotlinx-coroutines = "1.7.2"
+kotlin-logging = "3.0.5"
+logback = "1.4.8"
+ktor = "2.3.2"
+kotest = "5.6.2"
+koin = "3.4.2"
+dokka = "1.8.20"
+ktlint-plugin = "11.3.1"
+detekt = "1.23.0"
+aws-sdk-bom = "1.12.581"
+jdbi-bom = "3.39.1"
+hikaricp = "5.0.1"
+jcache = "1.1.1"
+caffeine = "3.1.7"
+redisson = "3.23.1"
+okhttp = "4.9.2"
+jackson = "2.15.2"
+postgresql = "42.6.0"
+kafka = "3.5.1"
+confluent = "7.4.0"
+avro = "1.11.2"
+testcontainers-bom = "1.18.3"
+kotest-extensions-koin = "1.1.0"
+kotest-extensions-ktor = "2.0.0"
+kotest-extensions-kafka = "2.0.0"
+kotest-extensions-testcontainers = "2.0.2"
+elasticsearch = "8.8.2"
+
+[libraries]
+kotlinx-coroutines = { module = "org.jetbrains.kotlin:kotlin-coroutines-core", version.ref = "kotlinx-coroutines" }
+ktor-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
+ktor-cors = { module = "io.ktor:ktor-server-cors", version.ref = "ktor" }
+ktor-json = { module = "io.ktor:ktor-serialization-jackson", version.ref = "ktor" }
+ktor-contentnegotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-websockets = { module = "io.ktor:ktor-server-websockets", version.ref = "ktor" }
+ktor-auth = { module = "io.ktor:ktor-server-auth", version.ref = "ktor" }
+ktor-auth-jwt = { module = "io.ktor:ktor-server-auth-jwt", version.ref = "ktor" }
+kotest = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+aws-sdk-bom = { module = "com.amazonaws:aws-java-sdk-bom", version.ref = "aws-sdk-bom" }
+jackson = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+jackson-javatime = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+jdbi-bom = { module = "org.jdbi:jdbi3-bom", version.ref = "jdbi-bom" }
+hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "hikaricp" }
+jcache-api = { module = "javax.cache:cache-api", version.ref = "jcache" }
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version.ref = "caffeine" }
+caffeine-jcache = { module = "com.github.ben-manes.caffeine:jcache", version.ref = "caffeine" }
+redisson = { module = "org.redisson:redisson", version.ref = "redisson" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+kotlin-logging = { module = "io.github.microutils:kotlin-logging-jvm", version.ref = "kotlin-logging" }
+kafka-clients = { module = "org.apache.kafka:kafka-clients", version.ref = "kafka" }
+kafka-streams = { module = "org.apache.kafka:kafka-streams", version.ref = "kafka" }
+kafkatest = { module = "org.apache.kafka:kafka-streams-test-utils", version.ref = "kafka" }
+confluent-avroserde = { module = "io.confluent:kafka-streams-avro-serde", version.ref = "confluent" }
+avro = { module = "org.apache.avro:avro", version.ref = "avro" }
+avrotools = { module = "org.apache.avro:avro-tools", version.ref = "avro" }
+testcontainers-bom = { module = "org.testcontainers:testcontainers-bom", version.ref = "testcontainers-bom" }
+kotest-extensions-koin = { module = "io.kotest.extensions:kotest-extensions-koin", version.ref = "kotest-extensions-koin"}
+kotest-extensions-ktor = { module = "io.kotest.extensions:kotest-assertions-ktor", version.ref = "kotest-extensions-ktor"}
+kotest-extensions-kafka = { module = "io.kotest.extensions:kotest-extensions-embedded-kafka", version.ref = "kotest-extensions-kafka"}
+kotest-extensions-testcontainers = { module = "io.kotest.extensions:kotest-extensions-testcontainers", version.ref = "kotest-extensions-testcontainers"}
+elasticsearch = { module = "co.elastic.clients:elasticsearch-java", version.ref = "elasticsearch" }
+
+# build src plugin libraries
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+dokka-plugin = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+detekt-plugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+ktlint-plugin = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlint-plugin" }
