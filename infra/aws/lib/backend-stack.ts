@@ -81,5 +81,11 @@ export class BackendStack extends cdk.Stack {
         new route53targets.Route53RecordTarget(d)
       )
     })
+
+    new CnameRecord(this, 'WIPAlias', {
+      zone: ethopediaDomain,
+      recordName: 'wip',
+      domainName: 'cname.vercel-dns.com.',
+    })
   }
 }

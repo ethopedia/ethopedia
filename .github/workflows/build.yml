@@ -1,9 +1,15 @@
-name: Deploy
+name: Build
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    types:
+      - opened
+      - reopened
+    branches:
+      - "*"
 
 env:
   AWS_REGION: us-east-1
@@ -47,7 +53,7 @@ jobs:
       - name: Install NPM packages
         run: pnpm install --no-frozen-lockfile
 
-      - name: Deploy project
-        run: pnpm run deploy
+      - name: Build project
+        run: pnpm run build
         env:
           CI: false
